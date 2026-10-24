@@ -9,4 +9,13 @@
 	
 	// echo ("Connection successful");
 	
+	$sql = "SELECT Employee_name, Department, Salary, Date_joined FROM employees";
+	
+	$result = $mysqli->query($sql);
+	
+	if (!$result) {
+		die('Data retrieval failed.');
+		exit();
+	}	
+	echo ("Data retrieval successful"); 
 ?> 
